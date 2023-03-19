@@ -57,6 +57,12 @@ For [lazy.nvim](https://github.com/folke/lazy.nvim):
     },
 }
 ```
+
+You will need a [patched font](https://www.nerdfonts.com/) including the latest 
+[codicons](https://github.com/microsoft/vscode-codicons) glyphs. The screenshot was taken using
+[Fira Code Regular Nerd Font Complete](https://github.com/meuter/nvim/raw/dd8f5d064321606e8a4b156e07b6f7413e2a676a/font/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf), 
+patched manually by yours truly and [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701).
+
 ## Components
 
 - `fancy_branch`: same as `branch` but with different default icon.
