@@ -1,4 +1,12 @@
-local function lsp_servers()
+local M = require('lualine.component'):extend()
+
+function M:init(options)
+    M.super.init(self, options)
+    self.options.icon = options.icon or "󰌘"
+    -- self.options.seperator = " "
+end
+
+function M:update_status()
     local buf_clients = vim.lsp.buf_get_clients()
     local null_ls_installed, null_ls = pcall(require, "null-ls")
     local buf_client_names = {}
@@ -17,7 +25,7 @@ local function lsp_servers()
             table.insert(buf_client_names, client.name)
         end
     end
-    return table.concat(buf_client_names, ", ")
+    return table.concat(buf_client_names, self.options.separator)
 end
 
-return lsp_servers
+return M
