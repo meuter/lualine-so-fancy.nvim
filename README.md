@@ -48,7 +48,7 @@ For [lazy.nvim](https://github.com/folke/lazy.nvim):
                 { "location" },
             },
             lualine_y = {
-                { "filetype" },
+                { "fancy_filetype", ts_icon = "" }
             },
             lualine_z = {
                 { "fancy_lsp_servers" }
@@ -64,6 +64,7 @@ For [lazy.nvim](https://github.com/folke/lazy.nvim):
   The default behaviour can be changed using `substitute_home=false`.
 - `fancy_diagnostics`: same as `diagnostics` but with different default symbols.
 - `fancy_diff`: same as `diff` but with different default synbols.
+- `fancy_filetype`: same as `filetype` but with a small tree icon if treesitter is available and running.
 - `fancy_lsp_servers`: display the list of currently connected LSP servers and [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) tools.
 - `fancy_macro`: displays the currently recording macros if any (useful if one uses `cmdheight=0`).
 - `fancy_mode`: same as `mode` but within a fixed-width section to avoid other components changing places when
