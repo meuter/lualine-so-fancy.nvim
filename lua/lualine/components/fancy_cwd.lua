@@ -1,11 +1,11 @@
 local M = require("lualine.component"):extend()
 
 function M:init(options)
-    M.super.init(self, options)
-    self.options.icon = options.icon or ""
-    if self.options.substitute_home == nil then
-        self.options.substitute_home = true
+    options.icon = options.icon or ""
+    if options.substitute_home == nil then
+        options.substitute_home = true
     end
+    M.super.init(self, options)
 end
 
 function M:update_status()

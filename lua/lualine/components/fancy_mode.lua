@@ -1,8 +1,8 @@
 local M = require('lualine.component'):extend()
 
 function M:init(options)
+    options.width = options.width or 3
     M.super.init(self, options)
-    self.options.width = options.width or 8
 end
 
 local function center(text, width)

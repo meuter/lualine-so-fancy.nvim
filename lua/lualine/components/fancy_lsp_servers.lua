@@ -1,9 +1,9 @@
 local M = require('lualine.component'):extend()
 
 function M:init(options)
+    options.icon = options.icon or "󰌘"
+    options.separator = options.separator or ","
     M.super.init(self, options)
-    self.options.icon = options.icon or "󰌘"
-    -- self.options.seperator = " "
 end
 
 function M:update_status()

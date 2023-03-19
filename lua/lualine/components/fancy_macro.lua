@@ -1,8 +1,8 @@
 local M = require('lualine.component'):extend()
 
 function M:init(options)
+    options.icon = options.icon or "󰑋"
     M.super.init(self, options)
-    self.options.icon = options.icon or "󰑋"
 end
 
 function M:update_status()
