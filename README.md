@@ -45,7 +45,7 @@ For [lazy.nvim](https://github.com/folke/lazy.nvim):
                 { "fancy_macro" },
                 { "fancy_diagnostics" },
                 { "fancy_searchcount" },
-                { "location" },
+                { "fancy_location" },
             },
             lualine_y = {
                 { "fancy_filetype", ts_icon = "" }
@@ -70,7 +70,9 @@ patched manually by yours truly and [Windows Terminal](https://apps.microsoft.co
   The default behaviour can be changed using `substitute_home=false`.
 - `fancy_diagnostics`: same as `diagnostics` but with different default symbols.
 - `fancy_diff`: same as `diff` but with different default synbols.
-- `fancy_filetype`: same as `filetype` but with a small tree icon if treesitter is available and running.
+- `fancy_filetype`: same as `filetype` but with a small tree icon if treesitter is available and running. 
+  The treesitter icon can be configured using `ts_icon`.
+- `fancy_location`: same as `location` bit with a small red pin icon by default.
 - `fancy_lsp_servers`: display the list of currently connected LSP servers and [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) tools.
 - `fancy_macro`: displays the currently recording macros if any (useful if one uses `cmdheight=0`).
 - `fancy_mode`: same as `mode` but within a fixed-width section to avoid other components changing places when
