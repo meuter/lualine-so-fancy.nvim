@@ -2,7 +2,6 @@ local M = require("lualine.component"):extend()
 
 function M:init(options)
     options.icon = options.icon or { "", color = { fg = "SkyBlue3" } }
-    options.color = options.color or { fg = "NONE" }
     if options.substitute_home == nil then
         options.substitute_home = true
     end
