@@ -13,11 +13,8 @@ function M:update_status()
     for _, client in pairs(buf_clients) do
         if client.name == "null-ls" then
             if null_ls_installed then
-                local m = null_ls.methods
-                for _, kind in ipairs({ m.FORMATTING, m.DIAGNOSTICS }) do
-                    for _, source in ipairs(null_ls.get_source({ filetype = vim.bo.filetype, method = kind })) do
-                        table.insert(buf_client_names, source.name)
-                    end
+                for _, source in ipairs(null_ls.get_source({ filetype = vim.bo.filetype })) do
+                    table.insert(buf_client_names, source.name)
                 end
             end
         else
