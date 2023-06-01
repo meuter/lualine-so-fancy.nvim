@@ -11,7 +11,10 @@ end
 function M:update_status()
     local result = vim.fn.getcwd()
     if self.options.substitute_home then
-        result = result:gsub(os.getenv("HOME"), "~")
+        local home = os.getenv("HOME")
+        if home and vim.startswith(result, home) then
+            result = "~" .. result:sub(home:len() + 1)
+        end
     end
     return result
 end
