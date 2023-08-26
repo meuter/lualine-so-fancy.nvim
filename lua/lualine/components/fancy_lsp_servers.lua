@@ -2,7 +2,7 @@ local M = require('lualine.component'):extend()
 
 function M:init(options)
     options.icon = options.icon or "󰌘"
-    options.separator = options.separator or ","
+    options.split = options.split or ","
     M.super.init(self, options)
 end
 
@@ -21,7 +21,7 @@ function M:update_status()
             table.insert(buf_client_names, client.name)
         end
     end
-    return table.concat(buf_client_names, self.options.separator)
+    return table.concat(buf_client_names, self.options.split)
 end
 
 return M
