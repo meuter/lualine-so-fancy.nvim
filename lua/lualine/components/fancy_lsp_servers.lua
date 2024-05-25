@@ -7,7 +7,7 @@ function M:init(options)
 end
 
 function M:update_status()
-    local buf_clients = vim.lsp.get_clients({ bufnr = 0 })
+    local buf_clients = vim.lsp.buf_get_clients()
     local null_ls_installed, null_ls = pcall(require, "null-ls")
     local buf_client_names = {}
     for _, client in pairs(buf_clients) do
