@@ -7,7 +7,13 @@ function M:init(options)
 end
 
 function M:update_status()
-    local buf_clients = vim.lsp.buf_get_clients()
+    local buf_clients = nil
+    if vim.lsp.get_clients != nil then
+        -- buf_get_client is deprecated in nvim >=0.10.0
+        buf_clients = vim.lsp.get_clients({ bufnr = 0 })
+    else
+        buf_clients = vim.lsp.buf_get_clients()
+    end
     local null_ls_installed, null_ls = pcall(require, "null-ls")
     local buf_client_names = {}
     for _, client in pairs(buf_clients) do
