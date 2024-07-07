@@ -1,4 +1,4 @@
-local M = require('lualine.component'):extend()
+local M = require("lualine.component"):extend()
 
 function M:init(options)
     options.icon = options.icon or "󰌘"
@@ -8,7 +8,7 @@ end
 
 function M:update_status()
     local buf_clients = nil
-    if vim.lsp.get_clients != nil then
+    if vim.lsp.get_clients ~= nil then
         -- buf_get_client is deprecated in nvim >=0.10.0
         buf_clients = vim.lsp.get_clients({ bufnr = 0 })
     else
