@@ -1,7 +1,7 @@
 local M = require("lualine.component"):extend()
 
 function M:init(options)
-	options.icon = options.icon or { "󰍒", color = { fg = "#fc5603" }, align = "left" }
+	options.icon = options.icon or { "󰦨", color = { fg = "#D7A65F" }, align = "left" }
 	M.super.init(self, options)
 end
 
