@@ -7,8 +7,15 @@ end
 
 function M:update_status()
 	local line = vim.fn.line(".")
+	local last_line = vim.api.nvim_buf_line_count(0)
 	local col = vim.fn.virtcol(".")
-	return string.format("%d:%d", line, col)
+	if line == 1 then
+		return "Top"
+	elseif line == last_line then
+		return "Bottom"
+	else
+		return string.format("%d:%d", line, col)
+	end
 end
 
 return M
