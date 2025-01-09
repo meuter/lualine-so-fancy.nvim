@@ -69,7 +69,7 @@ patched manually by yours truly and [Windows Terminal](https://apps.microsoft.co
 - `fancy_cwd`: displays the current working directory. By default, the `$HOME` directory is substituted with `~`. 
   The default behaviour can be changed using `substitute_home=false`.
 - `fancy_diagnostics`: same as `diagnostics` but with different default symbols.
-- `fancy_diff`: same as `diff` but with different default synbols.
+- `fancy_diff`: same as `diff` but with different default symbols.
 - `fancy_filetype`: same as `filetype` but with a small tree icon if treesitter is available and running. 
   The treesitter icon can be configured using `ts_icon`.
 - `fancy_location`: same as `location` bit with a small red pin icon by default.
